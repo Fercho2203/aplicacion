@@ -1,0 +1,30 @@
+create database aplicacion;
+use aplicacion;
+
+CREATE TABLE usuarios (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(100) NOT NULL,
+    Apellidos VARCHAR(100) NOT NULL,
+    Documentacion VARCHAR(9) UNIQUE NOT NULL,
+    Edad INT NOT NULL,
+    Genero ENUM('M', 'F') NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Telefono VARCHAR(25) NOT NULL
+);
+
+INSERT INTO usuarios (Nombre, Apellidos, Documentacion, Edad, Genero, Email, Telefono) VALUES
+('Juan', 'Pérez', '123456789', 30, 'M', 'juan@example.com', '123-456-7890'),
+('María', 'Gómez', '987654321', 25, 'F', 'maria@example.com', '987-654-3210'),
+('Carlos', 'Martínez', '456789012', 40, 'M', 'carlos@example.com', '456-789-0123'),
+('Laura', 'Rodríguez', '234567890', 28, 'F', 'laura@example.com', '234-567-8901'),
+('Pedro', 'Sánchez', '789012345', 35, 'M', 'pedro@example.com', '789-012-3456'),
+('Ana', 'López', '567890123', 22, 'F', 'ana@example.com', '567-890-1234'),
+('Javier', 'Fernández', '345678901', 45, 'M', 'javier@example.com', '345-678-9012'),
+('Isabel', 'García', '210987654', 27, 'F', 'isabel@example.com', '210-987-6543'),
+('Miguel', 'Hernández', '890123456', 33, 'M', 'miguel@example.com', '890-123-4567'),
+('Elena', 'Díaz', '678901234', 29, 'F', 'elena@example.com', '678-901-2345'),
+('Antonio', 'Vega', '543210987', 38, 'M', 'antonio@example.com', '543-210-9876'),
+('Carmen', 'Ortega', '432109876', 31, 'F', 'carmen@example.com', '432-109-8765'),
+('Francisco', 'Ruiz', '109876543', 42, 'M', 'francisco@example.com', '109-876-5432'),
+('Sandra', 'Jiménez', '876543210', 26, 'F', 'sandra@example.com', '876-543-2109'),
+('Daniel', 'Molina', '321098765', 34, 'M', 'daniel@example.com', '321-098-7654');
